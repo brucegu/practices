@@ -8,5 +8,9 @@ int main(int argc, char *argv)
     printf( "\n" );
     rectangle_show();
 
+    printf( "enter anything to quit!");
+    char input[20];
+    scanf( "%s", input );
+
     return 0;
 }

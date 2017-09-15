@@ -1,13 +1,20 @@
 objects = combinator.o circle.o rectangle.o
-shap : $(objects)
-	gcc -o shap.exe $(objects)
+mode = debug
+gccflags = -g
 
-combinator.o : circle.h rectangle.h
-	gcc -c combinator.c
-circle.o : circle.h
-	gcc -c circle.c
-rectangle.o : rectangle.h
-	gcc -c rectangle.c
+#ifeq ($(gccflags), debug)
+#gccflags = -g
+#endif
+
+shap : $(objects)
+	gcc $(gccflags) -o shap.exe $(objects)
+
+combinator.o : combinator.c circle.h rectangle.h
+	gcc -c $(gccflags) combinator.c
+circle.o : circle.c circle.h
+	gcc -c $(gccflags) circle.c
+rectangle.o : rectangle.c rectangle.h
+	gcc -c $(gccflags) rectangle.c
 
 .PHONY: clean
 clean :
