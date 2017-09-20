@@ -8,6 +8,11 @@ int main(int argc, char *argv)
     printf( "\n" );
     rectangle_show();
 
+    for (int i = 0; i < 10000; i++)
+    {
+        int j = i;
+    }
+
     printf( "enter anything to quit!");
     char input[20];
     scanf( "%s", input );
