@@ -7,12 +7,20 @@ int get_sort_type( char type[], int argc, char *argv[] );
 
 int main( int argc, char *argv[] )
 {
-    char type[10];
+    char type[30];
     if (get_sort_type( type, argc, argv ) == 0) return 0;
 
     if (strcmp(type, "bubble") == 0)
     {
         bubble_demo();
+    }
+    else if (strcmp(type, "bubble_stop_when_noexchange") == 0)
+    {
+        bubble_stop_when_noexchange_demo();
+    }
+    else if (strcmp(type, "bubble_low_high") == 0)
+    {
+        bubble_low_high_demo();
     }
     else
     {
@@ -35,7 +43,7 @@ int get_sort_type( char type[], int argc, char *argv[] )
 
             if (strcmp(tmp, "q") == 0) return 0;
 
-            if (strlen(tmp) <= 9)
+            if (strlen(tmp) <= 29)
             {
                 valid = 1;
                 strcpy(type, tmp);
@@ -48,7 +56,7 @@ int get_sort_type( char type[], int argc, char *argv[] )
     }
     else if (argc == 2)
     {
-        if (strlen(argv[1]) > 9)
+        if (strlen(argv[1]) > 29)
         {
             printf( "size of argument[%s] is too long! \n", argv[1] );
             return 0;
