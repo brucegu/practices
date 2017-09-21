@@ -3,16 +3,16 @@
 
 #include "bubble.h"
 
-int getSortType( char type[], int argc, char *argv[] );
+int get_sort_type( char type[], int argc, char *argv[] );
 
 int main( int argc, char *argv[] )
 {
     char type[10];
-    if (getSortType( type, argc, argv ) == 0) return 0;
+    if (get_sort_type( type, argc, argv ) == 0) return 0;
 
     if (strcmp(type, "bubble") == 0)
     {
-        bubble();
+        bubble_demo();
     }
     else
     {
@@ -22,7 +22,7 @@ int main( int argc, char *argv[] )
     return 0;
 }
 
-int getSortType( char type[], int argc, char *argv[] )
+int get_sort_type( char type[], int argc, char *argv[] )
 {
     if (argc == 1)
     {

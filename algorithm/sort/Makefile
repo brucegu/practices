@@ -6,7 +6,7 @@ sort : $(objects)
 
 main.o : main.c bubble.h
 	gcc -c $(gccflags) main.c
-bubble.o : bubble.c bubble.h
+bubble.o : bubble.c bubble.h defs.h
 	gcc -c $(gccflags) bubble.c
 
 .PHONY: clean
