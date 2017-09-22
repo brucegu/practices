@@ -1,4 +1,5 @@
 #include <stdio.h>
+
 #include "bubble.h"
 #include "defs.h"
 

@@ -2,6 +2,8 @@
 #include <string.h>
 
 #include "bubble.h"
+#include "quick.h"
+#include "insert.h"
 
 int get_sort_type( char type[], int argc, char *argv[] );
 
@@ -21,6 +23,14 @@ int main( int argc, char *argv[] )
     else if (strcmp(type, "bubble_low_high") == 0)
     {
         bubble_low_high_demo();
+    }
+    else if (strcmp(type, "quick") == 0)
+    {
+        quick_demo();
+    }
+    else if (strcmp(type, "straight_insert") == 0)
+    {
+        straight_insert_demo();
     }
     else
     {
