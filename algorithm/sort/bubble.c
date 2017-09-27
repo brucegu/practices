@@ -59,7 +59,7 @@ void bubble_low_high( int *data, int length )
     int high = length-1;
     while (low < high)
     {
-        for (int j = low; j < high-1; j++)
+        for (int j = low; j < high; j++)
         {
             if (data[j] > data[j+1]) swap( data, j, j+1 );
         }
